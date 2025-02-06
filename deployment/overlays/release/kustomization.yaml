@@ -3,6 +3,9 @@ kind: Kustomization
 patches: 
 - path: configmap-patch.yaml
 - path: deployment-w-storage-patch.yaml
+  target:
+    kind: Deployment
+    name: mynewtest-dev
 - path: service-patch.yaml
 
 resources: 
