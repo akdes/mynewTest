@@ -98,9 +98,9 @@ jobs:
         sed -i 's|\${APP_NAME}|'"$APP_NAME"'|g' deployment/base/deployment-w-storage.yaml deployment/base/service.yaml  deployment/base/configmap-w-storage.yaml deployment/base/secret.yaml  
         sed -i 's|\${OPENSHIFT_NAMESPACE}|'"$OPENSHIFT_NAMESPACE"'|g' deployment/base/deployment-w-storage.yaml deployment/base/service.yaml  deployment/base/configmap-w-storage.yaml deployment/base/secret.yaml  
         sed -i 's|\${IMAGE}|'"$IMAGE"'|g' deployment/base/deployment-w-storage.yaml deployment/base/service.yaml
-        sed -i 's|\${APP_NAME}|'"$APP_NAME"'|g' deployment/base/pv.yaml  deployment/base/pvc.yaml 
-        sed -i 's|\${OPENSHIFT_NAMESPACE}|'"$OPENSHIFT_NAMESPACE"'|g' deployment/base/pv.yaml  deployment/base/pvc.yaml 
-        oc apply -f deployment/base/pv.yaml -f deployment/base/pvc.yaml
+        sed -i 's|\${APP_NAME}|'"$APP_NAME"'|g'  deployment/base/pvc.yaml 
+        sed -i 's|\${OPENSHIFT_NAMESPACE}|'"$OPENSHIFT_NAMESPACE"'|g' deployment/base/pvc.yaml 
+        oc apply -f deployment/base/pvc.yaml
         oc apply -f deployment/base/configmap-w-storage.yaml -f deployment/base/secret.yaml
         oc apply -f deployment/base/deployment-w-storage.yaml -f deployment/base/service.yaml
         oc get pods
