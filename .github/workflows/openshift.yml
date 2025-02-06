@@ -105,7 +105,7 @@ jobs:
         oc apply -f deployment/base/deployment-w-storage.yaml -f deployment/base/service.yaml
 
         #kustomize
-        oc apply -k deployment/overlay/release        
+        oc apply -k deployment/overlays/release        
         
         oc get pods
 
