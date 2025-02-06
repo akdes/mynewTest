@@ -3,7 +3,7 @@ kind: Kustomization
 patches: 
 - path: configmap-patch.yaml
 
-resource: 
+resources: 
 - ../../base
 
 nameSuffix: -dev
