@@ -1,0 +1,6 @@
+resources: 
+  - deployment-w-storage.yaml
+  - configmap-w-storage.yaml
+  - secret.yaml
+  - service.yaml
+  - route.yaml
