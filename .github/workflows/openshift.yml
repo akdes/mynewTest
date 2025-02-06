@@ -95,7 +95,7 @@ jobs:
         
         echo ${{ steps.push-image.outputs.registry-path }}
         sed -i 's|\${IMAGE}|'"$IMAGE"'|g' deployment/base/deployment-w-storage.yaml deployment/base/service.yaml
-        sed -i 's|\${APP_NAME}|'"$APP_NAME"'|g' deployment/base/deployment-w-storage.yaml deployment/base/service.yaml  deployment/configmap-w-storage.yaml deployment/secret.yaml  
+        sed -i 's|\${APP_NAME}|'"$APP_NAME"'|g' deployment/base/deployment-w-storage.yaml deployment/base/service.yaml  deployment/base/configmap-w-storage.yaml deployment/base/secret.yaml  
         sed -i 's|\${OPENSHIFT_NAMESPACE}|'"$OPENSHIFT_NAMESPACE"'|g' deployment/base/deployment-w-storage.yaml deployment/base/service.yaml  deployment/base/configmap-w-storage.yaml deployment/base/secret.yaml  
         sed -i 's|\${IMAGE}|'"$IMAGE"'|g' deployment/base/deployment-w-storage.yaml deployment/base/service.yaml
         sed -i 's|\${APP_NAME}|'"$APP_NAME"'|g' deployment/base/pv.yaml  deployment/base/pvc.yaml 
